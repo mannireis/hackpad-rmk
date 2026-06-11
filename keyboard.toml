@@ -21,7 +21,8 @@ matrix_map = """
 [[input_device.encoder]]
 pin_a = "PIN_0"
 pin_b = "PIN_1"
-phase = "default"
+internal_pullup = true
+phase = "e8h7"
 
 [[layer]]
 name = "layer0"
