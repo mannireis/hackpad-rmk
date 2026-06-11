@@ -19,12 +19,10 @@ matrix_map = """
 """
 
 [[input_device.encoder]]
-pin_a = "PIN_0"
-pin_b = "PIN_1"
+pin_a = "PIN_1"
+pin_b = "PIN_0"
 internal_pullup = true
-phase = "resolution"
-reverse = true
-resolution = { detent = 30, pulse = 15 }
+phase = "e8h7"
 
 [[layer]]
 name = "layer0"
