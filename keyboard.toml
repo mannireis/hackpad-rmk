@@ -1,10 +1,34 @@
+[keyboard]
+name = "shoop"
+vendor_id = 0x4C4B
+product_id = 0x4643
+manufacturer = "YourName"
+chip = "rp2040"
+
+[matrix]
+row_pins = ["PIN_6", "PIN_7"]
+col_pins = ["PIN_26", "PIN_27", "PIN_28", "PIN_29"]
+
+[layout]
+rows = 2
+cols = 4
+layers = 8
+matrix_map = """
+(0,0) (0,1) (0,2) (0,3)
+(1,0) (1,1) (1,2) (1,3)
+"""
+
+[[input_device.encoder]]
+pin_a = "PIN_0"
+pin_b = "PIN_1"
+
 [[layer]]
 name = "layer0"
 keys = """
 A B C D
 Kc1 Kc2 Kc3 Kc4
 """
-encoders = [["KC_VOLU", "KC_VOLD"]]
+encoders = [["AudioVolUp", "AudioVolDown"]]
 
 [[layer]]
 name = "layer1"
@@ -12,7 +36,7 @@ keys = """
 _ _ _ _
 _ _ _ _
 """
-encoders = [["KC_BRIU", "KC_BRID"]]
+encoders = [["BrightnessUp", "BrightnessDown"]]
 
 [[layer]]
 name = "layer2"
@@ -20,7 +44,7 @@ keys = """
 _ _ _ _
 _ _ _ _
 """
-encoders = [["KC_LEFT", "KC_RIGHT"]]
+encoders = [["Left", "Right"]]
 
 [[layer]]
 name = "layer3"
