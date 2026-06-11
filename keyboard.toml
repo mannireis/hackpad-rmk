@@ -22,7 +22,9 @@ matrix_map = """
 pin_a = "PIN_0"
 pin_b = "PIN_1"
 internal_pullup = true
-phase = "e8h7"
+phase = "resolution"
+reverse = true
+resolution = { detent = 30, pulse = 15 }
 
 [[layer]]
 name = "layer0"
