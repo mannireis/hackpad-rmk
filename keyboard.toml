@@ -1,34 +1,141 @@
 [keyboard]
 name = "shoop"
 product_name = "shoop"
-vendor_id    = 0x4C4B
-product_id   = 0x4643
+vendor_id = 0x4C4B
+product_id = 0x4643
 manufacturer = "me!!!"
-chip         = "rp2040"
+chip = "rp2040"
 
 [matrix]
 row_pins = ["PIN_6", "PIN_7"]
 col_pins = ["PIN_26", "PIN_27", "PIN_28", "PIN_29"]
 
+# default is col2row, so nothing else needed unless your diodes are reversed
+# row2col = true
+
+
 [layout]
-rows   = 2
-cols   = 4
-layers = 2
+rows = 2
+cols = 4
+layers = 8
 
-# Define the keymap layers. Each layer is 2 rows of 4 columns.
-# (Use actual RMK keycodes or macros here; "_" below means no-op)
-keymap = [
-  [
-    ["A", "B", "C", "D"],
-    ["KC1", "KC2", "KC3", "KC4"],
-  ],
-  [
-    ["__", "__", "__", "__"],
-    ["__", "__", "__", "__"],
-  ]
-]
+matrix_map = """
+(0,0) (0,1) (0,2) (0,3)
+(1,0) (1,1) (1,2) (1,3)
+"""
 
+# -----------------------
+# ROTARY ENCODER (1 knob)
+# -----------------------
 [[input_device.encoder]]
 pin_a = "PIN_0"
 pin_b = "PIN_1"
 phase = "default"
+
+
+# -----------------------
+# LAYER 0 (base)
+# -----------------------
+[[layer]]
+name = "base"
+keys = """
+A B C D
+Kc1 Kc2 Kc3 Kc4
+"""
+
+# -----------------------
+# LAYER 1
+# -----------------------
+[[layer]]
+name = "layer1"
+keys = """
+_ _ _ _
+_ _ _ _
+"""
+
+# -----------------------
+# LAYER 2
+# -----------------------
+[[layer]]
+name = "layer2"
+keys = """
+_ _ _ _
+_ _ _ _
+"""
+
+# -----------------------
+# LAYER 3
+# -----------------------
+[[layer]]
+name = "layer3"
+keys = """
+_ _ _ _
+_ _ _ _
+"""
+
+# -----------------------
+# LAYER 4
+# -----------------------
+[[layer]]
+name = "layer4"
+keys = """
+_ _ _ _
+_ _ _ _
+"""
+
+# -----------------------
+# LAYER 5
+# -----------------------
+[[layer]]
+name = "layer5"
+keys = """
+_ _ _ _
+_ _ _ _
+"""
+
+# -----------------------
+# LAYER 6
+# -----------------------
+[[layer]]
+name = "layer6"
+keys = """
+_ _ _ _
+_ _ _ _
+"""
+
+# -----------------------
+# LAYER 7
+# -----------------------
+[[layer]]
+name = "layer7"
+keys = """
+_ _ _ _
+_ _ _ _
+"""
+
+# -----------------------
+# ENCODER MAPPING (per layer)
+# -----------------------
+[[encoder]]
+# layer 0 behavior
+ccw = "AUDIO_VOL_DOWN"
+cw  = "AUDIO_VOL_UP"
+press = "RGB_TOG"
+
+[[encoder]]
+# layer 1 behavior
+ccw = "RGB_HUD"
+cw  = "RGB_HUI"
+press = "RGB_TOG"
+
+[[encoder]]
+# layer 2 behavior
+ccw = "KC_LEFT"
+cw  = "KC_RIGHT"
+press = "KC_ENTER"
+
+[[encoder]]
+# repeat pattern or customize per layer as needed
+ccw = "_"
+cw  = "_"
+press = "_"
