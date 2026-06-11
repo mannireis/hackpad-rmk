@@ -1,33 +1,31 @@
-# Documentation: https://rmk.rs/docs/configuration.html
 [keyboard]
 name = "shoop"
 product_name = "shoop"
-vendor_id = 0x4c4b
-product_id = 0x4643
+vendor_id    = 0x4C4B
+product_id   = 0x4643
 manufacturer = "me!!!"
-chip = "rp2040"
+chip         = "rp2040"
 
 [matrix]
-# Row and col pins are mandatory
 row_pins = ["PIN_6", "PIN_7"]
 col_pins = ["PIN_26", "PIN_27", "PIN_28", "PIN_29"]
 
-# RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
-# row2col = true
-
 [layout]
-rows = 2
-cols = 4
-layers = 8
+rows   = 2
+cols   = 4
+layers = 2
+
+# Define the keymap layers. Each layer is 2 rows of 4 columns.
+# (Use actual RMK keycodes or macros here; "_" below means no-op)
 keymap = [
   [
     ["A", "B", "C", "D"],
-    ["Kc1", "Kc2", "Kc3", "Kc4"],
+    ["KC1", "KC2", "KC3", "KC4"],
   ],
   [
-    ["_", "_", "_", "_"],
-    ["_", "_", "_", "_"],
-  ],
+    ["__", "__", "__", "__"],
+    ["__", "__", "__", "__"],
+  ]
 ]
 
 [[input_device.encoder]]
