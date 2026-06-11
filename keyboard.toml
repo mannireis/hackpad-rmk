@@ -21,6 +21,7 @@ matrix_map = """
 [[input_device.encoder]]
 pin_a = "PIN_0"
 pin_b = "PIN_1"
+phase = "default"
 
 [[layer]]
 name = "layer0"
