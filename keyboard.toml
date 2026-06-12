@@ -21,8 +21,7 @@ matrix_map = """
 [[input_device.encoder]]
 pin_a = "PIN_1"
 pin_b = "PIN_0"
-internal_pullup = true
-phase = "e8h7"
+phase = "default"
 
 [[layer]]
 name = "layer0"
@@ -32,58 +31,5 @@ Kc1 Kc2 Kc3 Kc4
 """
 encoders = [["AudioVolUp", "AudioVolDown"]]
 
-[[layer]]
-name = "layer1"
-keys = """
-_ _ _ _
-_ _ _ _
-"""
-encoders = [["BrightnessUp", "BrightnessDown"]]
 
-[[layer]]
-name = "layer2"
-keys = """
-_ _ _ _
-_ _ _ _
-"""
-encoders = [["Left", "Right"]]
-
-[[layer]]
-name = "layer3"
-keys = """
-_ _ _ _
-_ _ _ _
-"""
-encoders = [["_", "_"]]
-
-[[layer]]
-name = "layer4"
-keys = """
-_ _ _ _
-_ _ _ _
-"""
-encoders = [["_", "_"]]
-
-[[layer]]
-name = "layer5"
-keys = """
-_ _ _ _
-_ _ _ _
-"""
-encoders = [["_", "_"]]
-
-[[layer]]
-name = "layer6"
-keys = """
-_ _ _ _
-_ _ _ _
-"""
-encoders = [["_", "_"]]
-
-[[layer]]
-name = "layer7"
-keys = """
-_ _ _ _
-_ _ _ _
-"""
 encoders = [["_", "_"]]
