@@ -2,7 +2,7 @@
 name = "shoop"
 vendor_id = 0x4C4B
 product_id = 0x4643
-manufacturer = "YourName"
+manufacturer = "manni"
 chip = "rp2040"
 
 [matrix]
@@ -29,7 +29,5 @@ keys = """
 A B C D
 Kc1 Kc2 Kc3 Kc4
 """
+
 encoders = [["AudioVolUp", "AudioVolDown"]]
-
-
-encoders = [["_", "_"]]
